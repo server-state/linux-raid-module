@@ -1,0 +1,5 @@
+Personalities : [raid1] [raid0] 
+md127 : active raid0 sdb9[2] sdb8[1] sdb7[0]
+      62862336 blocks super 1.2 512k chunks
+      
+unused devices: <none>

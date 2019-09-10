@@ -1,0 +1,5 @@
+Personalities : [raid1] [raid0] [raid6] [raid5] [raid4] [raid10] 
+md127 : active raid10 sdb18[2](F) sdb17[1](F) sdb16[0]
+      20954112 blocks super 1.2 512K chunks 2 far-copies [2/1] [U_]
+      
+unused devices: <none>

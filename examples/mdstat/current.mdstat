@@ -1,0 +1,14 @@
+Personalities : [raid1] [raid0] [linear] [multipath] [raid6] [raid5] [raid4] [raid10] 
+md125 : active raid0 md126[1] md127[0]
+      7813301248 blocks super 1.2 512k chunks
+      
+md126 : active raid1 sdc1[0](S) sdd1[1]
+      3906783040 blocks super 1.2 [2/2] [UU]
+      bitmap: 0/30 pages [0KB], 65536KB chunk
+
+md127 : active raid1 sdb1[1](F) sda1[0]
+      3906783040 blocks super 1.2 [2/2] [UU]
+      bitmap: 0/30 pages [0KB], 65536KB chunk
+      [==>..................]  recovery = 12.6% (37043392/292945152) finish=127.5min speed=33440K/sec
+
+unused devices: <none>

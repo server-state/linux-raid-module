@@ -1,0 +1,25 @@
+Personalities : [raid1] [raid0] [linear] [multipath] [raid6] [raid5] [raid4] [raid10] 
+md127 : active raid0 sdb9[2] sdb8[1] sdb7[0]
+      62862336 blocks super 1.2 512k chunks
+      
+md126 : active raid1 sdb4[3] sdb3[2](S) sdb2[1](F) sdb1[0]
+      20954112 blocks super 1.2 [2/1] [U_]
+      [=============>.......]  recovery = 67.9% (14240192/20954112) finish=3.6min speed=30564K/sec
+      bitmap: 1/1 pages [4KB], 65536KB chunk
+
+md125 : active raid5 sdb14[5] sdb15[4](S) sdb13[2] sdb12[1] sdb11[0]
+      62862336 blocks super 1.2 level 5, 256k chunk, algorithm 2 [4/3] [UUU_]
+      [=================>...]  recovery = 88.2% (18500948/20954112) finish=3.7min speed=10989K/sec
+
+md124 : active raid5 sdb6[3] sdb5[1](F) sdb10[0]
+      41908224 blocks super 1.2 level 5, 512k chunk, algorithm 2 [3/2] [U_U]
+      bitmap: 0/1 pages [0KB], 65536KB chunk
+
+md123 : active raid10 sdb18[2](F) sdb17[1](F) sdb16[0]
+      20954112 blocks super 1.2 512K chunks 2 far-copies [2/1] [U_]
+
+md122 : active raid1 sdb20[2](R) sdb21[1] sdb22[0]
+      20954112 blocks super 1.2 [2/2] [UU]
+      [==>..................]  recovery = 14.6% (3068672/20954112) finish=10.0min speed=29708K/sec
+
+unused devices: <none>
