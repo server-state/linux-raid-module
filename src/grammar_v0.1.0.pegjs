@@ -6,15 +6,6 @@
 // ================================================
 // Copyright (C) server-state
 
-{
-    function concatObjects() {
-        var result = {};
-        for (var element of arguments)
-            for (var name in element)
-                result[name] = element[name];
-        return result;
-    }
-}
 
 // ====== ENTRY POINT ======
 start
@@ -36,7 +27,7 @@ raid
         whitespace secondLine:secondLine "\n"
         options:(whitespace option:optionLine "\n" { return option; })*
         whitespace "\n" {
-            return concatObjects(firstLine, secondLine, {"options": options});
+            return Object.assign(firstLine, secondLine, {"options": options});
     }
 
 // +----- BEGIN: first line -----+
@@ -91,8 +82,8 @@ deviceStatusIdentifier
 
 // +----- BEGIN: second line -----+
 secondLine
-    = blocks:integer " blocks " parameters:$[0-9a-z, .]i* devicePosition:devicePosition? {
-        return concatObjects(
+    = blocks:integer " blocks " parameters:$[0-9a-z, .-]i* devicePosition:devicePosition? {
+        return Object.assign(
             {
                 "blocks": blocks,
                 "parameters": parameters.trim()
@@ -104,7 +95,7 @@ secondLine
 devicePosition
     = "[" ideal:integer "/" current:integer "] [" [_,U]* "]" {
         return {
-            "ideal": ideal,
+            ideal: ideal,
             "current": current
         };
     }
