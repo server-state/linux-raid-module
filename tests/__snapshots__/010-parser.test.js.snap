@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test parse at different RAID10 (linux) definitions Test especially RAID10 with 2 devices and 1 spare parse correctly a recovering RAID10 definition with 1 failed device phase 1 1`] = `
+exports[`Test parse at different RAID10 (linux) definitions Test especially RAID10 with 2 devices and 1 spare should parse correctly a recovering RAID10 definition with 1 failed device phase 1 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -53,7 +53,7 @@ Object {
 }
 `;
 
-exports[`Test parse at different RAID10 (linux) definitions Test especially RAID10 with 2 devices and 1 spare parse correctly a stable RAID10 definition 1`] = `
+exports[`Test parse at different RAID10 (linux) definitions Test especially RAID10 with 2 devices and 1 spare should parse correctly a stable RAID10 definition 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -96,7 +96,7 @@ Object {
 }
 `;
 
-exports[`Test parse at different RAID10 (linux) definitions Test especially RAID10 with 2 devices and 1 spare parse correctly a stable RAID10 definition with 2 failed devices 1`] = `
+exports[`Test parse at different RAID10 (linux) definitions Test especially RAID10 with 2 devices and 1 spare should parse correctly a stable RAID10 definition with 2 failed devices 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -139,7 +139,7 @@ Object {
 }
 `;
 
-exports[`Test parse at different RAID10 (linux) definitions Test especially RAID10 with 2 devices and 1 spare parse correctly a syncing RAID10 definition phase 1 1`] = `
+exports[`Test parse at different RAID10 (linux) definitions Test especially RAID10 with 2 devices and 1 spare should parse correctly a syncing RAID10 definition phase 1 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -192,7 +192,7 @@ Object {
 }
 `;
 
-exports[`Test parse at different RAID10 (linux) definitions Test especially RAID10 with 2 devices and 1 spare parse correctly a syncing RAID10 definition phase 2 1`] = `
+exports[`Test parse at different RAID10 (linux) definitions Test especially RAID10 with 2 devices and 1 spare should parse correctly a syncing RAID10 definition phase 2 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -245,7 +245,7 @@ Object {
 }
 `;
 
-exports[`Test parser at RAID0 definition parse correctly a RAID0 definition 1`] = `
+exports[`Test parser at RAID0 definition should parse correctly a RAID0 definition 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -282,7 +282,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare parse correctly a recovering RAID1 definition with 1 failed device phase 1 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a recovering RAID1 definition with 1 failed device phase 1 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -330,7 +330,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare parse correctly a recovering RAID1 definition with 1 failed device phase 2 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a recovering RAID1 definition with 1 failed device phase 2 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -378,7 +378,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare parse correctly a rescueing RAID1 definition with 1 recovery drive phase 1 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a rescueing RAID1 definition with 1 recovery drive phase 1 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -427,7 +427,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare parse correctly a rescueing RAID1 definition with 1 recovery drive phase 2 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a rescueing RAID1 definition with 1 recovery drive phase 2 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -476,7 +476,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare parse correctly a stable RAID1 definition 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a stable RAID1 definition 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -514,7 +514,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare parse correctly a stable RAID1 definition with 1 failed device 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a stable RAID1 definition with 1 failed device 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -552,7 +552,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare parse correctly a stable RAID1 definition with 1 recovery drive 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a stable RAID1 definition with 1 recovery drive 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -591,7 +591,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare parse correctly a stable RAID1 definition with 1 removed device 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a stable RAID1 definition with 1 removed device 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -624,7 +624,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare parse correctly a stable RAID1 definition with 1 removed drive 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a stable RAID1 definition with 1 removed drive 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -658,7 +658,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare parse correctly a stable RAID1 definition with 2 failed devices 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a stable RAID1 definition with 2 failed devices 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -696,7 +696,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare parse correctly a stable RAID1 definition with 2 removed devices 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a stable RAID1 definition with 2 removed devices 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -724,7 +724,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare parse correctly a syncing RAID1 definition phase 1 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a syncing RAID1 definition phase 1 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -772,7 +772,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare parse correctly a syncing RAID1 definition phase 2 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a syncing RAID1 definition phase 2 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -820,7 +820,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and bitmap parse correctly a recovering RAID1 definition with 1 failed device phase 1 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and bitmap should parse correctly a recovering RAID1 definition with 1 failed device phase 1 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -885,7 +885,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and bitmap parse correctly a syncing RAID1 definition phase 1 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and bitmap should parse correctly a syncing RAID1 definition phase 1 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -950,7 +950,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 3 devices parse correctly a stable RAID1 definition 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 3 devices should parse correctly a stable RAID1 definition 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -988,7 +988,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 3 devices parse correctly a stable RAID1 definition with 1 failed device 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 3 devices should parse correctly a stable RAID1 definition with 1 failed device 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -1026,7 +1026,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 3 devices parse correctly a stable RAID1 definition with 2 failed devices 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 3 devices should parse correctly a stable RAID1 definition with 2 failed devices 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -1064,7 +1064,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 3 devices parse correctly a syncing RAID1 definition phase 1 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 3 devices should parse correctly a syncing RAID1 definition phase 1 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -1112,7 +1112,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID1 definitions Test especially RAID1 with 3 devices parse correctly a syncing RAID1 definition phase 2 1`] = `
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 3 devices should parse correctly a syncing RAID1 definition phase 2 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -1160,7 +1160,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID5 definitions Test especially RAID5 with 3 devices and bitmap parse correctly a stable RAID5 definition 1`] = `
+exports[`Test parser at different RAID5 definitions Test especially RAID5 with 3 devices and bitmap should parse correctly a stable RAID5 definition 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -1211,7 +1211,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID5 definitions Test especially RAID5 with 3 devices and bitmap parse correctly a stable RAID5 definition with 1 failed device 1`] = `
+exports[`Test parser at different RAID5 definitions Test especially RAID5 with 3 devices and bitmap should parse correctly a stable RAID5 definition with 1 failed device 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -1262,7 +1262,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID5 definitions Test especially RAID5 with 3 devices and bitmap parse correctly a syncing RAID5 definition phase 1 1`] = `
+exports[`Test parser at different RAID5 definitions Test especially RAID5 with 3 devices and bitmap should parse correctly a syncing RAID5 definition phase 1 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -1322,7 +1322,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID5 definitions Test especially RAID5 with 3 devices and bitmap parse correctly a syncing RAID5 definition phase 2 1`] = `
+exports[`Test parser at different RAID5 definitions Test especially RAID5 with 3 devices and bitmap should parse correctly a syncing RAID5 definition phase 2 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -1382,7 +1382,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID5 definitions Test especially RAID5 with 4 devices and 1 spare parse correctly a syncing RAID5 definition phase 1 1`] = `
+exports[`Test parser at different RAID5 definitions Test especially RAID5 with 4 devices and 1 spare should parse correctly a syncing RAID5 definition phase 1 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -1444,7 +1444,7 @@ Object {
 }
 `;
 
-exports[`Test parser at different RAID5 definitions Test especially RAID5 with 4 devices and 1 spare parse correctly a syncing RAID5 definition phase 2 1`] = `
+exports[`Test parser at different RAID5 definitions Test especially RAID5 with 4 devices and 1 spare should parse correctly a syncing RAID5 definition phase 2 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -1506,7 +1506,7 @@ Object {
 }
 `;
 
-exports[`Test parser at normal mdstats parse correctly typical mdstat 1`] = `
+exports[`Test parser at normal mdstats should parse correctly typical mdstat 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -1749,7 +1749,7 @@ Object {
 }
 `;
 
-exports[`Test parser at other edge cases parse correctly an inactive and read-only raid 1`] = `
+exports[`Test parser at other edge cases should parse correctly an inactive and read-only raid 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -1828,7 +1828,7 @@ Object {
 }
 `;
 
-exports[`Test parser at other edge cases parse correctly an minimal mdstat 1`] = `
+exports[`Test parser at other edge cases should parse correctly an minimal mdstat 1`] = `
 Object {
   "personalities": Array [
     "raid1",

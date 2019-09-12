@@ -1,33 +1,34 @@
-const mock = require('mock-fs');
-const serverModule = require('../');
+require('./_gen-pegjs-parser');
+
+jest.doMock('fs');
 
 describe('Test module export', () => {
-    it('should return an error object because no file', async () => {
-        // mock file in temporary file system
-        mock({
-            '/proc/': {
-                'mdstat': null
-            }
-        });
-        // apply module function
-        const res = await serverModule();
-        expect(res).toEqual({error: 'kernel module not loaded'});
+    const MOCKED_NO_FILE = {};
+    const MOCKED_EMPTY_FILE = {
+        '/proc/mdstat': '\n'
+    };
+    const MOCKED_NOPARSE_FILE = {
+        '/proc/mdstat': 'I am not parsable :D\n'
+    }
+
+    it('should return an error object when file /proc/mdstat do not exist', async () => {
+        require('fs').__setMockFiles(MOCKED_NO_FILE);
+
+        const serverModule = require('../src');
+        expect(serverModule()).rejects.toThrow();
     });
 
-    /* it('should return an error object because not parsable file', async () => {
-        // mock file in temporary file system
-        mock({
-            '/proc/': {
-                'mdstat': '\n'
-            }
-        });
+    it('should return an error object when file /proc/mdstat is empty', async () => {
+        require('fs').__setMockFiles(MOCKED_EMPTY_FILE);
 
-        // apply module function
-        const res = await serverModule();
-        expect(res).toHaveProperty('error', /Please report the issue to module author!/);
-    }); */
-});
+        const serverModule = require('../src');
+        expect(serverModule()).rejects.toThrow();
+    });
 
-afterAll(() => {
-    mock.restore();
+    it('should return an error object when file /proc/mdstat is not parsable', async () => {
+        require('fs').__setMockFiles(MOCKED_NOPARSE_FILE);
+
+        const serverModule = require('../src');
+        expect(serverModule()).rejects.toThrow();
+    });
 });
