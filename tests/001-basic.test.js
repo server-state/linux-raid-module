@@ -7,12 +7,18 @@ test('two plus two is four', () => {
 });
 
 describe('Validity of return value of function', () => {
-    const MOCKED_FILES = {
-        '/proc/mdstat': 'Personalities : [raid1] \nunused devices: <none>\n'
+    const MOCKED = {
+        files: {
+            '/proc/mdstat': 'Personalities : [raid1] \nunused devices: <none>\n'
+        },
+        dirs: {
+            '/dev/md': []
+        },
+        links: {}
     };
 
     beforeEach(() => {
-        require('fs').__setMockFiles(MOCKED_FILES);
+        require('fs').__setMockFS(MOCKED);
     });
 
     test('JSON serializable', async (done) => {
