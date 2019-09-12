@@ -9,7 +9,7 @@ describe('Test module export', () => {
     };
     const MOCKED_NOPARSE_FILE = {
         '/proc/mdstat': 'I am not parsable :D\n'
-    }
+    };
 
     it('should return an error object when file /proc/mdstat do not exist', async () => {
         require('fs').__setMockFiles(MOCKED_NO_FILE);
