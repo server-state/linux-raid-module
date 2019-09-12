@@ -1,0 +1,1838 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test parse at different RAID10 (linux) definitions Test especially RAID10 with 2 devices and 1 spare should parse correctly a recovering RAID10 definition with 1 failed device phase 1 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+    "raid6",
+    "raid5",
+    "raid4",
+    "raid10",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 1,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb18",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb17",
+          "status": "failed",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb16",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md127",
+      "options": Array [
+        Object {
+          "activityType": "recovery",
+          "finish": 12.4,
+          "processed": 304448,
+          "progress": 1.4,
+          "speed": 27677,
+          "total": 20954112,
+          "type": "activity",
+        },
+      ],
+      "parameters": "super 1.2 512K chunks 2 far-copies",
+      "state": "active",
+      "type": "raid10",
+    },
+  ],
+}
+`;
+
+exports[`Test parse at different RAID10 (linux) definitions Test especially RAID10 with 2 devices and 1 spare should parse correctly a stable RAID10 definition 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+    "raid6",
+    "raid5",
+    "raid4",
+    "raid10",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb18",
+          "status": "spare",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb17",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb16",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2 512K chunks 2 far-copies",
+      "state": "active",
+      "type": "raid10",
+    },
+  ],
+}
+`;
+
+exports[`Test parse at different RAID10 (linux) definitions Test especially RAID10 with 2 devices and 1 spare should parse correctly a stable RAID10 definition with 2 failed devices 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+    "raid6",
+    "raid5",
+    "raid4",
+    "raid10",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 1,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb18",
+          "status": "failed",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb17",
+          "status": "failed",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb16",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2 512K chunks 2 far-copies",
+      "state": "active",
+      "type": "raid10",
+    },
+  ],
+}
+`;
+
+exports[`Test parse at different RAID10 (linux) definitions Test especially RAID10 with 2 devices and 1 spare should parse correctly a syncing RAID10 definition phase 1 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+    "raid6",
+    "raid5",
+    "raid4",
+    "raid10",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb18",
+          "status": "spare",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb17",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb16",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md127",
+      "options": Array [
+        Object {
+          "activityType": "resync",
+          "finish": 22,
+          "processed": 790016,
+          "progress": 3.7,
+          "speed": 15216,
+          "total": 20954112,
+          "type": "activity",
+        },
+      ],
+      "parameters": "super 1.2 512K chunks 2 far-copies",
+      "state": "active",
+      "type": "raid10",
+    },
+  ],
+}
+`;
+
+exports[`Test parse at different RAID10 (linux) definitions Test especially RAID10 with 2 devices and 1 spare should parse correctly a syncing RAID10 definition phase 2 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+    "raid6",
+    "raid5",
+    "raid4",
+    "raid10",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb18",
+          "status": "spare",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb17",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb16",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md127",
+      "options": Array [
+        Object {
+          "activityType": "resync",
+          "finish": 2.9,
+          "processed": 19229632,
+          "progress": 91.7,
+          "speed": 9806,
+          "total": 20954112,
+          "type": "activity",
+        },
+      ],
+      "parameters": "super 1.2 512K chunks 2 far-copies",
+      "state": "active",
+      "type": "raid10",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at RAID0 definition should parse correctly a RAID0 definition 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb9",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb8",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb7",
+          "status": "active",
+        },
+      ],
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a recovering RAID1 definition with 1 failed device phase 1 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 1,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sda3",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sda2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sda1",
+          "status": "failed",
+        },
+      ],
+      "ideal": 2,
+      "name": "md127",
+      "options": Array [
+        Object {
+          "activityType": "recovery",
+          "finish": 9.9,
+          "processed": 1406464,
+          "progress": 6.7,
+          "speed": 32596,
+          "total": 20954112,
+          "type": "activity",
+        },
+      ],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a recovering RAID1 definition with 1 failed device phase 2 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 1,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sda3",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sda2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sda1",
+          "status": "failed",
+        },
+      ],
+      "ideal": 2,
+      "name": "md127",
+      "options": Array [
+        Object {
+          "activityType": "recovery",
+          "finish": 0.3,
+          "processed": 20372160,
+          "progress": 97.2,
+          "speed": 30553,
+          "total": 20954112,
+          "type": "activity",
+        },
+      ],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a rescueing RAID1 definition with 1 recovery drive phase 1 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb20",
+          "status": "rescue",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md126",
+      "options": Array [
+        Object {
+          "activityType": "recovery",
+          "finish": 10,
+          "processed": 3068672,
+          "progress": 14.6,
+          "speed": 29708,
+          "total": 20954112,
+          "type": "activity",
+        },
+      ],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a rescueing RAID1 definition with 1 recovery drive phase 2 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb20",
+          "status": "rescue",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md126",
+      "options": Array [
+        Object {
+          "activityType": "recovery",
+          "finish": 3.2,
+          "processed": 15600512,
+          "progress": 74.4,
+          "speed": 27496,
+          "total": 20954112,
+          "type": "activity",
+        },
+      ],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a stable RAID1 definition 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sda3",
+          "status": "spare",
+        },
+        Object {
+          "index": 1,
+          "name": "sda2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sda1",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a stable RAID1 definition with 1 failed device 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sda3",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sda2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sda1",
+          "status": "failed",
+        },
+      ],
+      "ideal": 2,
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a stable RAID1 definition with 1 recovery drive 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb20",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "failed",
+        },
+      ],
+      "ideal": 2,
+      "name": "md126",
+      "options": Array [],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a stable RAID1 definition with 1 removed device 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 1,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sda3",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sda2",
+          "status": "failed",
+        },
+      ],
+      "ideal": 2,
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a stable RAID1 definition with 1 removed drive 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb20",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb2",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md126",
+      "options": Array [],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a stable RAID1 definition with 2 failed devices 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 1,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sda3",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sda2",
+          "status": "failed",
+        },
+        Object {
+          "index": 0,
+          "name": "sda1",
+          "status": "failed",
+        },
+      ],
+      "ideal": 2,
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a stable RAID1 definition with 2 removed devices 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 1,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sda3",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a syncing RAID1 definition phase 1 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sda3",
+          "status": "spare",
+        },
+        Object {
+          "index": 1,
+          "name": "sda2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sda1",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md127",
+      "options": Array [
+        Object {
+          "activityType": "resync",
+          "finish": 10.3,
+          "processed": 1668608,
+          "progress": 7.9,
+          "speed": 31196,
+          "total": 20954112,
+          "type": "activity",
+        },
+      ],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and 1 spare should parse correctly a syncing RAID1 definition phase 2 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sda3",
+          "status": "spare",
+        },
+        Object {
+          "index": 1,
+          "name": "sda2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sda1",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md127",
+      "options": Array [
+        Object {
+          "activityType": "resync",
+          "finish": 2.6,
+          "processed": 16022016,
+          "progress": 76.4,
+          "speed": 30844,
+          "total": 20954112,
+          "type": "activity",
+        },
+      ],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and bitmap should parse correctly a recovering RAID1 definition with 1 failed device phase 1 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+    "raid6",
+    "raid5",
+    "raid4",
+    "raid10",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 1,
+      "devices": Array [
+        Object {
+          "index": 3,
+          "name": "sdb4",
+          "status": "active",
+        },
+        Object {
+          "index": 2,
+          "name": "sdb3",
+          "status": "spare",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb2",
+          "status": "failed",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md127",
+      "options": Array [
+        Object {
+          "activityType": "recovery",
+          "finish": 11.2,
+          "processed": 630336,
+          "progress": 3,
+          "speed": 30016,
+          "total": 20954112,
+          "type": "activity",
+        },
+        Object {
+          "chunkSize": 65536,
+          "sizePages": 4,
+          "totalPages": 1,
+          "type": "bitmap",
+          "usedPages": 1,
+        },
+      ],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and bitmap should parse correctly a syncing RAID1 definition phase 1 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+    "raid6",
+    "raid5",
+    "raid4",
+    "raid10",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 3,
+          "name": "sdb4",
+          "status": "spare",
+        },
+        Object {
+          "index": 2,
+          "name": "sdb3",
+          "status": "spare",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md127",
+      "options": Array [
+        Object {
+          "activityType": "resync",
+          "finish": 10.9,
+          "processed": 737216,
+          "progress": 3.5,
+          "speed": 30717,
+          "total": 20954112,
+          "type": "activity",
+        },
+        Object {
+          "chunkSize": 65536,
+          "sizePages": 4,
+          "totalPages": 1,
+          "type": "bitmap",
+          "usedPages": 1,
+        },
+      ],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 3 devices should parse correctly a stable RAID1 definition 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 3,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sda6",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sda5",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sda4",
+          "status": "active",
+        },
+      ],
+      "ideal": 3,
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 3 devices should parse correctly a stable RAID1 definition with 1 failed device 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sda6",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sda5",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sda4",
+          "status": "failed",
+        },
+      ],
+      "ideal": 3,
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 3 devices should parse correctly a stable RAID1 definition with 2 failed devices 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 1,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sda6",
+          "status": "failed",
+        },
+        Object {
+          "index": 1,
+          "name": "sda5",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sda4",
+          "status": "failed",
+        },
+      ],
+      "ideal": 3,
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 3 devices should parse correctly a syncing RAID1 definition phase 1 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 3,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sda6",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sda5",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sda4",
+          "status": "active",
+        },
+      ],
+      "ideal": 3,
+      "name": "md127",
+      "options": Array [
+        Object {
+          "activityType": "resync",
+          "finish": 27.2,
+          "processed": 2444928,
+          "progress": 11.6,
+          "speed": 11330,
+          "total": 20954112,
+          "type": "activity",
+        },
+      ],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 3 devices should parse correctly a syncing RAID1 definition phase 2 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 3,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sda6",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sda5",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sda4",
+          "status": "active",
+        },
+      ],
+      "ideal": 3,
+      "name": "md127",
+      "options": Array [
+        Object {
+          "activityType": "resync",
+          "finish": 2.2,
+          "processed": 19315328,
+          "progress": 92.1,
+          "speed": 11978,
+          "total": 20954112,
+          "type": "activity",
+        },
+      ],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID5 definitions Test especially RAID5 with 3 devices and bitmap should parse correctly a stable RAID5 definition 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+    "raid6",
+    "raid5",
+    "raid4",
+    "raid10",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 41908224,
+      "current": 3,
+      "devices": Array [
+        Object {
+          "index": 3,
+          "name": "sdb3",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "active",
+        },
+      ],
+      "ideal": 3,
+      "name": "md127",
+      "options": Array [
+        Object {
+          "chunkSize": 65536,
+          "sizePages": 0,
+          "totalPages": 1,
+          "type": "bitmap",
+          "usedPages": 0,
+        },
+      ],
+      "parameters": "super 1.2 level 5, 512k chunk, algorithm 2",
+      "state": "active",
+      "type": "raid5",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID5 definitions Test especially RAID5 with 3 devices and bitmap should parse correctly a stable RAID5 definition with 1 failed device 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+    "raid6",
+    "raid5",
+    "raid4",
+    "raid10",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 41908224,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 3,
+          "name": "sdb3",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb2",
+          "status": "failed",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "active",
+        },
+      ],
+      "ideal": 3,
+      "name": "md127",
+      "options": Array [
+        Object {
+          "chunkSize": 65536,
+          "sizePages": 0,
+          "totalPages": 1,
+          "type": "bitmap",
+          "usedPages": 0,
+        },
+      ],
+      "parameters": "super 1.2 level 5, 512k chunk, algorithm 2",
+      "state": "active",
+      "type": "raid5",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID5 definitions Test especially RAID5 with 3 devices and bitmap should parse correctly a syncing RAID5 definition phase 1 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+    "raid6",
+    "raid5",
+    "raid4",
+    "raid10",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 41908224,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 3,
+          "name": "sdb3",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "active",
+        },
+      ],
+      "ideal": 3,
+      "name": "md127",
+      "options": Array [
+        Object {
+          "activityType": "recovery",
+          "finish": 35.1,
+          "processed": 264564,
+          "progress": 1.2,
+          "speed": 9798,
+          "total": 20954112,
+          "type": "activity",
+        },
+        Object {
+          "chunkSize": 65536,
+          "sizePages": 0,
+          "totalPages": 1,
+          "type": "bitmap",
+          "usedPages": 0,
+        },
+      ],
+      "parameters": "super 1.2 level 5, 512k chunk, algorithm 2",
+      "state": "active",
+      "type": "raid5",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID5 definitions Test especially RAID5 with 3 devices and bitmap should parse correctly a syncing RAID5 definition phase 2 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+    "raid6",
+    "raid5",
+    "raid4",
+    "raid10",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 41908224,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 3,
+          "name": "sdb3",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "active",
+        },
+      ],
+      "ideal": 3,
+      "name": "md127",
+      "options": Array [
+        Object {
+          "activityType": "recovery",
+          "finish": 3.7,
+          "processed": 16609556,
+          "progress": 79.2,
+          "speed": 19355,
+          "total": 20954112,
+          "type": "activity",
+        },
+        Object {
+          "chunkSize": 65536,
+          "sizePages": 0,
+          "totalPages": 1,
+          "type": "bitmap",
+          "usedPages": 0,
+        },
+      ],
+      "parameters": "super 1.2 level 5, 512k chunk, algorithm 2",
+      "state": "active",
+      "type": "raid5",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID5 definitions Test especially RAID5 with 4 devices and 1 spare should parse correctly a syncing RAID5 definition phase 1 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+    "raid6",
+    "raid5",
+    "raid4",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "current": 3,
+      "devices": Array [
+        Object {
+          "index": 5,
+          "name": "sdb14",
+          "status": "active",
+        },
+        Object {
+          "index": 4,
+          "name": "sdb15",
+          "status": "spare",
+        },
+        Object {
+          "index": 2,
+          "name": "sdb13",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb12",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb11",
+          "status": "active",
+        },
+      ],
+      "ideal": 4,
+      "name": "md127",
+      "options": Array [
+        Object {
+          "activityType": "recovery",
+          "finish": 33.7,
+          "processed": 460412,
+          "progress": 2.1,
+          "speed": 10113,
+          "total": 20954112,
+          "type": "activity",
+        },
+      ],
+      "parameters": "super 1.2 level 5, 256k chunk, algorithm 2",
+      "state": "active",
+      "type": "raid5",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID5 definitions Test especially RAID5 with 4 devices and 1 spare should parse correctly a syncing RAID5 definition phase 2 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+    "raid6",
+    "raid5",
+    "raid4",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "current": 3,
+      "devices": Array [
+        Object {
+          "index": 5,
+          "name": "sdb14",
+          "status": "active",
+        },
+        Object {
+          "index": 4,
+          "name": "sdb15",
+          "status": "spare",
+        },
+        Object {
+          "index": 2,
+          "name": "sdb13",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb12",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb11",
+          "status": "active",
+        },
+      ],
+      "ideal": 4,
+      "name": "md127",
+      "options": Array [
+        Object {
+          "activityType": "recovery",
+          "finish": 0,
+          "processed": 20910688,
+          "progress": 99.7,
+          "speed": 11496,
+          "total": 20954112,
+          "type": "activity",
+        },
+      ],
+      "parameters": "super 1.2 level 5, 256k chunk, algorithm 2",
+      "state": "active",
+      "type": "raid5",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at normal mdstats should parse correctly typical mdstat 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+    "linear",
+    "multipath",
+    "raid6",
+    "raid5",
+    "raid4",
+    "raid10",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb9",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb8",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb7",
+          "status": "active",
+        },
+      ],
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+    },
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 1,
+      "devices": Array [
+        Object {
+          "index": 3,
+          "name": "sdb4",
+          "status": "active",
+        },
+        Object {
+          "index": 2,
+          "name": "sdb3",
+          "status": "spare",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb2",
+          "status": "failed",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md126",
+      "options": Array [
+        Object {
+          "activityType": "recovery",
+          "finish": 3.6,
+          "processed": 14240192,
+          "progress": 67.9,
+          "speed": 30564,
+          "total": 20954112,
+          "type": "activity",
+        },
+        Object {
+          "chunkSize": 65536,
+          "sizePages": 4,
+          "totalPages": 1,
+          "type": "bitmap",
+          "usedPages": 1,
+        },
+      ],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "current": 3,
+      "devices": Array [
+        Object {
+          "index": 5,
+          "name": "sdb14",
+          "status": "active",
+        },
+        Object {
+          "index": 4,
+          "name": "sdb15",
+          "status": "spare",
+        },
+        Object {
+          "index": 2,
+          "name": "sdb13",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb12",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb11",
+          "status": "active",
+        },
+      ],
+      "ideal": 4,
+      "name": "md125",
+      "options": Array [
+        Object {
+          "activityType": "recovery",
+          "finish": 3.7,
+          "processed": 18500948,
+          "progress": 88.2,
+          "speed": 10989,
+          "total": 20954112,
+          "type": "activity",
+        },
+      ],
+      "parameters": "super 1.2 level 5, 256k chunk, algorithm 2",
+      "state": "active",
+      "type": "raid5",
+    },
+    Object {
+      "access": "rw",
+      "blocks": 41908224,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 3,
+          "name": "sdb6",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb5",
+          "status": "failed",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb10",
+          "status": "active",
+        },
+      ],
+      "ideal": 3,
+      "name": "md124",
+      "options": Array [
+        Object {
+          "chunkSize": 65536,
+          "sizePages": 0,
+          "totalPages": 1,
+          "type": "bitmap",
+          "usedPages": 0,
+        },
+      ],
+      "parameters": "super 1.2 level 5, 512k chunk, algorithm 2",
+      "state": "active",
+      "type": "raid5",
+    },
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 1,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb18",
+          "status": "failed",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb17",
+          "status": "failed",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb16",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md123",
+      "options": Array [],
+      "parameters": "super 1.2 512K chunks 2 far-copies",
+      "state": "active",
+      "type": "raid10",
+    },
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb20",
+          "status": "rescue",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb21",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb22",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md122",
+      "options": Array [
+        Object {
+          "activityType": "recovery",
+          "finish": 10,
+          "processed": 3068672,
+          "progress": 14.6,
+          "speed": 29708,
+          "total": 20954112,
+          "type": "activity",
+        },
+      ],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at other edge cases should parse correctly an inactive and read-only raid 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+    "raid6",
+    "raid5",
+    "raid4",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 83816448,
+      "devices": Array [
+        Object {
+          "index": 1,
+          "name": "sdb8",
+          "status": "active",
+        },
+        Object {
+          "index": 2,
+          "name": "sdb9",
+          "status": "active",
+        },
+        Object {
+          "index": 3,
+          "name": "sdb10",
+          "status": "spare",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb7",
+          "status": "active",
+        },
+      ],
+      "name": "md125",
+      "options": Array [],
+      "parameters": "super 1.2",
+      "state": "inactive",
+      "type": null,
+    },
+    Object {
+      "access": "ro",
+      "blocks": 20954112,
+      "current": 1,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb20",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md126",
+      "options": Array [],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+    Object {
+      "access": "rw",
+      "blocks": 20954112,
+      "devices": Array [
+        Object {
+          "index": 4,
+          "name": "sdb15",
+          "status": "spare",
+        },
+      ],
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2",
+      "state": "inactive",
+      "type": null,
+    },
+  ],
+}
+`;
+
+exports[`Test parser at other edge cases should parse correctly an minimal mdstat 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+  ],
+  "raids": Array [],
+}
+`;
