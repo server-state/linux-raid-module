@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test module export should return an correct result with one missing unique name 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb3",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "active",
+        },
+      ],
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": "myRaid",
+    },
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb6",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb5",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb4",
+          "status": "active",
+        },
+      ],
+      "name": "md126",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": undefined,
+    },
+  ],
+}
+`;
+
+exports[`Test module export should return an correct result with one wrong link destination 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb3",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "active",
+        },
+      ],
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": "myRaid",
+    },
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb6",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb5",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb4",
+          "status": "active",
+        },
+      ],
+      "name": "md126",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": undefined,
+    },
+  ],
+}
+`;
+
+exports[`Test module export should return an result with correct unique names 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb3",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "active",
+        },
+      ],
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": "myRaid",
+    },
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb6",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb5",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb4",
+          "status": "active",
+        },
+      ],
+      "name": "md126",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": "mySecondRaid",
+    },
+  ],
+}
+`;
