@@ -1,6 +1,444 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test module export should return an correct result with one missing unique name 1`] = `
+exports[`Test module options Test option 'filter' should filter block device without unique name 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb3",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "active",
+        },
+      ],
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": "myRaid",
+    },
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb6",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb5",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb4",
+          "status": "active",
+        },
+      ],
+      "name": "md126",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": "mySecondRaid",
+    },
+  ],
+}
+`;
+
+exports[`Test module options Test option 'filter' should filter everything 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+  ],
+  "raids": Array [],
+}
+`;
+
+exports[`Test module options Test option 'filter' should filter everything except 'myRaid' 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb3",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "active",
+        },
+      ],
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": "myRaid",
+    },
+  ],
+}
+`;
+
+exports[`Test module options Test option 'filter' should filter everything except 'myRaid' and 'mySecondRaid' 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb3",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "active",
+        },
+      ],
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": "myRaid",
+    },
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb6",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb5",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb4",
+          "status": "active",
+        },
+      ],
+      "name": "md126",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": "mySecondRaid",
+    },
+  ],
+}
+`;
+
+exports[`Test module options Test option 'filter' should filter out 'myRaid' 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb6",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb5",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb4",
+          "status": "active",
+        },
+      ],
+      "name": "md126",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": "mySecondRaid",
+    },
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb9",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb8",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb7",
+          "status": "active",
+        },
+      ],
+      "name": "md125",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": undefined,
+    },
+  ],
+}
+`;
+
+exports[`Test module options Test option 'filter' should filter out 'myRaid' and 'mySecondRaid' 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb9",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb8",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb7",
+          "status": "active",
+        },
+      ],
+      "name": "md125",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": undefined,
+    },
+  ],
+}
+`;
+
+exports[`Test module options Test option 'filter' should not filter any raids 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb3",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "active",
+        },
+      ],
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": "myRaid",
+    },
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb6",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb5",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb4",
+          "status": "active",
+        },
+      ],
+      "name": "md126",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": "mySecondRaid",
+    },
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb9",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb8",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb7",
+          "status": "active",
+        },
+      ],
+      "name": "md125",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": undefined,
+    },
+  ],
+}
+`;
+
+exports[`Test module options Test option 'invert' should do nothing 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb3",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb2",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "active",
+        },
+      ],
+      "name": "md127",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": "myRaid",
+    },
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb6",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb5",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb4",
+          "status": "active",
+        },
+      ],
+      "name": "md126",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": "mySecondRaid",
+    },
+  ],
+}
+`;
+
+exports[`Test simple module behaviour should return an correct result with one missing unique name 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -65,7 +503,7 @@ Object {
 }
 `;
 
-exports[`Test module export should return an correct result with one wrong link destination 1`] = `
+exports[`Test simple module behaviour should return an correct result with one wrong link destination 1`] = `
 Object {
   "personalities": Array [
     "raid1",
@@ -130,7 +568,7 @@ Object {
 }
 `;
 
-exports[`Test module export should return an result with correct unique names 1`] = `
+exports[`Test simple module behaviour should return an result with correct unique names 1`] = `
 Object {
   "personalities": Array [
     "raid1",

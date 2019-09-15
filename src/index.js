@@ -2,11 +2,24 @@ const fs = require('fs');
 const path = require('path');
 const parser = require('./grammar.pegjs');
 
+const defaultOptions = {
+    filter: [],
+    invert: false
+};
+
+function validateOptions(options) {
+    if (!Array.isArray(options.filter) || typeof options.invert !== 'boolean')
+        throw new Error('Wrong type of option members!');
+}
+
 /**
  * The Linux RAID module for the server-state system
  * @returns A JSON-serializable (via `JSON.stringify()`) version information about the raids in the linux system
  */
-module.exports = async function () {
+module.exports = async function (options) {
+    options = Object.assign(defaultOptions, options);
+    validateOptions(options);
+
     let file;
     // pull file from filesystem
     try {
@@ -38,5 +51,11 @@ module.exports = async function () {
         raid['unique'] = raidNames[raid['name']];
     }
 
+    // filter through valid raids
+    // passes filter, if name is unique or name of raid inserted (with invert option)
+    result.raids = result.raids.filter(elem => 
+        options.invert ^ !(options.filter.includes(elem.unique) || options.filter.includes(elem.name))
+    );
+    
     return result;
 };
