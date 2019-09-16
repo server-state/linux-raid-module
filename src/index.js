@@ -8,8 +8,11 @@ const defaultOptions = {
 };
 
 function validateOptions(options) {
-    if (!Array.isArray(options.filter) || typeof options.invert !== 'boolean')
-        throw new Error('Wrong type of option members!');
+    if (!Array.isArray(options.filter))
+        throw new Error('Wrong argument type. Expected options: filter to be an array, but found ' + typeof options.filter);
+
+    if (typeof options.invert !== 'boolean')
+        throw new Error('Wrong argument type. Expected options: invert to be a boolean, but found ' + typeof options.invert);
 }
 
 /**
