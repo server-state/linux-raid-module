@@ -16,8 +16,17 @@ function validateOptions(options) {
 }
 
 /**
- * The Linux RAID module for the server-state system
- * @returns A JSON-serializable (via `JSON.stringify()`) version information about the raids in the linux system
+ * A module for the server-state system
+ * 
+ * Parse the file /proc/mdstat generated from the linux raid kernel module and extract useful information
+ * 
+ * @throws if invalid options format is given
+ * @throws if kernel module not loaded and file /proc/mdstat not created
+ * @throws if parser can not parse current /proc/mdstat
+ * 
+ * @argument options given options to specifiy module task
+ * 
+ * @returns {object|array|string|number|boolean} A JSON-serializable (via `JSON.stringify()`) vers{object|array|string|number|boolean}ion information about the raids in the linux system
  */
 module.exports = async function (options) {
     options = Object.assign(defaultOptions, options);

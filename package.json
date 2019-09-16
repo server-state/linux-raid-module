@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Default template for server-base modules",
   "main": "index.js",
-  "private": true,
   "scripts": {
     "test": "jest",
     "lint": "eslint ./src ./tests",
