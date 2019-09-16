@@ -115,23 +115,35 @@ bitmap
     }
 
 activity
-    = "[" [=]* [>] [.]* "]  " activityType:activityType " =" whitespace progress:float "% "
-        "(" processed:integer "/" total:integer ") "
-        "finish=" finish:float "min "
-        "speed=" speed:integer "K/sec" {
-        return {
+    = ("[" [=]* [>] [.]* "]  ")? activityType:activityType whitespace "=" whitespace progress:progress
+        activityStats:activityStats? {
+        return Object.assign({
             type: "activity",
             activityType: activityType,
-            progress: progress,
-            processed: processed,
-            total: total,
-            finish: finish,
-            speed: speed
-        };
+            progress: progress
+        }, activityStats);
     }
 
 activityType
     = "recovery" / "resync"
+
+progress
+	= progress:float "% " {
+    	return progress;
+    }
+    / "DELAYED"
+
+activityStats
+	= "(" processed:integer "/" total:integer ") "
+        "finish=" finish:float "min "
+        "speed=" speed:integer "K/sec" {
+        return {
+        	processed: processed,
+            total: total,
+            finish: finish,
+            speed: speed
+        }
+    }
 
 unknown
     = value:$[^\n]+ {
