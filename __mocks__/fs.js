@@ -1,6 +1,7 @@
 // Manual mocking of nodejs modules
 // https://jestjs.io/docs/en/manual-mocks.html
 
+// Due to the jest testing environment, jest is defined without ESLint knowing about it. Therefore:
 // eslint-disable-next-line no-undef
 const fs = jest.genMockFromModule('fs');
 
