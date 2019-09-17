@@ -5,9 +5,9 @@
 ![module type: official](https://img.shields.io/badge/module%20type-official-%23015ba0)
 ![npm (scoped)](https://img.shields.io/npm/v/@server-state/linux-raid-module)
 
-This module parse the file /proc/mdstat generated from the linux raid kernel module and extract useful information for example raidname, current devices with their status, activities, etc.
+This module parses the file /proc/mdstat generated from the Linux raid kernel module and extracts useful information, for example, raid name, current devices with their status, activities.
 
-This is how a /proc/mdstat could look like:
+The `/proc/mdstat` file might look like this:
 ```
 Personalities : [raid1] [raid0] 
 md126 : active raid1 sdb20[2](R) sdb2[1] sdb1[0]
@@ -18,7 +18,7 @@ unused devices: <none>
 
 ```
 
-And this is the parsed JSON output:
+For it, the parsed JSON output would look like this:
 ```json
 {
    "personalities": [
@@ -68,6 +68,6 @@ And this is the parsed JSON output:
    ]
 }
 ```
-This output generates a straight base to provide other applications useful information like server-states example [client-base](https://github.com/server-state/client-base).
+This output generates a straight base to provide other applications useful information like server-state example [client-base](https://github.com/server-state/client-base).
 
-The official module belongs to the organization [server-state](https://github.com/server-state).
+This official module belongs to the organization [server-state](https://github.com/server-state).
