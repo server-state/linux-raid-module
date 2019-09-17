@@ -1,0 +1,11 @@
+__mocks__
+tests/
+examples/
+coverage/
+.travis.yml
+src/
+webpack.config.js
+.vscode
+.idea
+.github
+.eslintrc.js
