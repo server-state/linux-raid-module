@@ -7,5 +7,10 @@ module.exports = {
     },
     node: {
         fs: 'empty'
+    },
+    module: {
+        rules: [
+            { test: /\.pegjs$/, use: 'pegjs-loader' }
+        ]
     }
 };

@@ -1,27 +1,15 @@
 // linux-raid-module parser grammar
 // Written for PEGJS parser.
-// To compile:
-// Go to online version: https://pegjs.org/online
-// Build parser and download parser code.
 // ================================================
 // Copyright (C) server-state
 
-{
-    function concatObjects() {
-        var result = {};
-        for (var element of arguments)
-            for (var name in element)
-                result[name] = element[name];
-        return result;
-    }
-}
 
 // ====== ENTRY POINT ======
 start
     = personalities:personalities raids:raid* unused {
         return {
-            "personalities": personalities,
-            "raids": raids
+            personalities: personalities,
+            raids: raids
         };
     }
 
@@ -36,7 +24,7 @@ raid
         whitespace secondLine:secondLine "\n"
         options:(whitespace option:optionLine "\n" { return option; })*
         whitespace "\n" {
-            return concatObjects(firstLine, secondLine, {"options": options});
+            return Object.assign(firstLine, secondLine, {options: options});
     }
 
 // +----- BEGIN: first line -----+
@@ -46,11 +34,11 @@ firstLine
     type:(" " type:raidType { return type; })? 
     devices:(" " device:device { return device; })* {
         return {
-            "name": name,
-            "state": state,
-            "access": (access ? access : "rw"),
-            "type": type,
-            "devices": devices
+            name: name,
+            state: state,
+            access: (access ? access : "rw"),
+            type: type,
+            devices: devices
         };
     }
 
@@ -63,11 +51,11 @@ access
     }
 
 device
-    = name:linuxDevice "[" index:integer "]" status:deviceStatus {        
+    = name:linuxDevice "[" index:integer "]" status:deviceStatus {
         return {
-            "name": name,
-            "index": index,
-            "status": status
+            name: name,
+            index: index,
+            status: status
         };
     }
 
@@ -91,11 +79,11 @@ deviceStatusIdentifier
 
 // +----- BEGIN: second line -----+
 secondLine
-    = blocks:integer " blocks " parameters:$[0-9a-z, .]i* devicePosition:devicePosition? {
-        return concatObjects(
+    = blocks:integer " blocks " parameters:$[0-9a-z, .-]i* devicePosition:devicePosition? {
+        return Object.assign(
             {
-                "blocks": blocks,
-                "parameters": parameters.trim()
+                blocks: blocks,
+                parameters: parameters.trim()
             },
             devicePosition
         );
@@ -104,8 +92,8 @@ secondLine
 devicePosition
     = "[" ideal:integer "/" current:integer "] [" [_,U]* "]" {
         return {
-            "ideal": ideal,
-            "current": current
+            ideal: ideal,
+            current: current
         };
     }
 // +----- END: second line -----+
@@ -118,38 +106,50 @@ bitmap
     = "bitmap: " usedPages:integer "/" totalPages:integer " pages [" sizePages:integer "KB], "
         chunkSize:integer "KB chunk" {
         return {
-            "type": "bitmap",
-            "usedPages": usedPages,
-            "totalPages": totalPages,
-            "sizePages": sizePages,
-            "chunkSize": chunkSize
+            type: "bitmap",
+            usedPages: usedPages,
+            totalPages: totalPages,
+            sizePages: sizePages,
+            chunkSize: chunkSize
         };
     }
 
 activity
-    = "[" [=]* [>] [.]* "]  " activityType:activityType " =" whitespace progress:float "% "
-        "(" processed:integer "/" total:integer ") "
-        "finish=" finish:float "min "
-        "speed=" speed:integer "K/sec" {
-        return {
-            "type": "activity",
-            "activityType": activityType,
-            "progress": progress,
-            "processed": processed,
-            "total": total,
-            "finish": finish,
-            "speed": speed
-        };
+    = ("[" [=]* [>] [.]* "]  ")? activityType:activityType whitespace "=" whitespace progress:progress
+        activityStats:activityStats? {
+        return Object.assign({
+            type: "activity",
+            activityType: activityType,
+            progress: progress
+        }, activityStats);
     }
 
 activityType
     = "recovery" / "resync"
 
+progress
+	= progress:float "% " {
+    	return progress;
+    }
+    / "DELAYED"
+
+activityStats
+	= "(" processed:integer "/" total:integer ") "
+        "finish=" finish:float "min "
+        "speed=" speed:integer "K/sec" {
+        return {
+        	processed: processed,
+            total: total,
+            finish: finish,
+            speed: speed
+        }
+    }
+
 unknown
     = value:$[^\n]+ {
         return {
-            "type": "unknown",
-            "value": value
+            type: "unknown",
+            value: value
         };
     }
 // +----- END: option lines -----+
