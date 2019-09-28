@@ -29,7 +29,7 @@ function validateOptions(options) {
  * @returns {object|array|string|number|boolean} A JSON-serializable (via `JSON.stringify()`) vers{object|array|string|number|boolean}ion information about the raids in the linux system
  */
 module.exports = async function (options) {
-    options = Object.assign(defaultOptions, options);
+    options = Object.assign({}, defaultOptions, options);
     validateOptions(options);
 
     let file;
