@@ -125,7 +125,7 @@ activity
     }
 
 activityType
-    = "recovery" / "resync"
+    = "recovery" / "resync" / "check"
 
 progress
 	= progress:float "% " {
