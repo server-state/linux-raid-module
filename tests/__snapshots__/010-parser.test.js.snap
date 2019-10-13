@@ -575,6 +575,120 @@ Object {
 }
 `;
 
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and a bitmap should parse correctly a RAID1 definition checking with issued check command 1 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+    "linear",
+    "multipath",
+    "raid6",
+    "raid5",
+    "raid4",
+    "raid10",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 3906783040,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 1,
+          "name": "sda1",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md127",
+      "options": Array [
+        Object {
+          "activityType": "check",
+          "finish": 352.4,
+          "processed": 35327488,
+          "progress": 0.9,
+          "speed": 183050,
+          "total": 3906783040,
+          "type": "activity",
+        },
+        Object {
+          "chunkSize": 65536,
+          "sizePages": 0,
+          "totalPages": 30,
+          "type": "bitmap",
+          "usedPages": 0,
+        },
+      ],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
+exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and a bitmap should parse correctly a RAID1 definition checking with issued check command 2 1`] = `
+Object {
+  "personalities": Array [
+    "raid1",
+    "raid0",
+    "linear",
+    "multipath",
+    "raid6",
+    "raid5",
+    "raid4",
+    "raid10",
+  ],
+  "raids": Array [
+    Object {
+      "access": "rw",
+      "blocks": 3906783040,
+      "current": 2,
+      "devices": Array [
+        Object {
+          "index": 1,
+          "name": "sda1",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb1",
+          "status": "active",
+        },
+      ],
+      "ideal": 2,
+      "name": "md127",
+      "options": Array [
+        Object {
+          "activityType": "check",
+          "finish": 52.7,
+          "processed": 2502342341,
+          "progress": 73.9,
+          "speed": 186040,
+          "total": 3906783040,
+          "type": "activity",
+        },
+        Object {
+          "chunkSize": 65536,
+          "sizePages": 0,
+          "totalPages": 30,
+          "type": "bitmap",
+          "usedPages": 0,
+        },
+      ],
+      "parameters": "super 1.2",
+      "state": "active",
+      "type": "raid1",
+    },
+  ],
+}
+`;
+
 exports[`Test parser at different RAID1 definitions Test especially RAID1 with 2 devices and a bitmap should parse correctly a RAID1 definition recovering with 1 failed device phase 1 1`] = `
 Object {
   "personalities": Array [

@@ -114,6 +114,14 @@ const TEST_DEFINITION = [
                     [
                         'recovering with 1 failed device phase 1',
                         './examples/mdstat/raid1wsb.mdstat.faulty.0'
+                    ],
+                    [
+                        'checking with issued check command 1',
+                        './examples/mdstat/raid1wsb.mdstat.check.0'
+                    ],
+                    [
+                        'checking with issued check command 2',
+                        './examples/mdstat/raid1wsb.mdstat.check.1'
                     ]
                 ]
             ]
