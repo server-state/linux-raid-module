@@ -434,6 +434,33 @@ Object {
       "type": "raid0",
       "unique": "mySecondRaid",
     },
+    Object {
+      "access": "rw",
+      "blocks": 62862336,
+      "devices": Array [
+        Object {
+          "index": 2,
+          "name": "sdb9",
+          "status": "active",
+        },
+        Object {
+          "index": 1,
+          "name": "sdb8",
+          "status": "active",
+        },
+        Object {
+          "index": 0,
+          "name": "sdb7",
+          "status": "active",
+        },
+      ],
+      "name": "md125",
+      "options": Array [],
+      "parameters": "super 1.2 512k chunks",
+      "state": "active",
+      "type": "raid0",
+      "unique": undefined,
+    },
   ],
 }
 `;
