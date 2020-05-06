@@ -21,7 +21,7 @@
   "devDependencies": {
     "coveralls": "^3.0.6",
     "eslint": "^6.3.0",
-    "jest": "^25.1.0",
+    "jest": "^26.0.1",
     "pegjs": "^0.10.0",
     "pegjs-loader": "^0.5.5",
     "webpack": "^4.39.3",
