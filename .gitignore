@@ -63,3 +63,6 @@ typings/
 # IDE folders
 .idea
 .vscode
+
+# Compiled files
+/index.js
