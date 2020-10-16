@@ -1,12 +1,14 @@
 module.exports = {
-    entry: './src/index.js',
     output: {
         path: __dirname,
         filename: 'index.js',
         libraryTarget: 'commonjs2'
     },
-    node: {
-        fs: 'empty'
+    resolve: {
+        fallback: {
+            path: false,
+            fs: false
+        }
     },
     module: {
         rules: [
